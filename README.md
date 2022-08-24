@@ -1,1 +1,1 @@
-# Hibernete_Demo
+# Hibernete core.
