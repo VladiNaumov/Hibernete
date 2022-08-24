@@ -1,4 +1,4 @@
-package com.naumdeveloper.hibernate;
+package com.naumdeveloper.hibernate.version1;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
