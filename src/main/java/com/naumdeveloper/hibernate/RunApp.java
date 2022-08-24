@@ -5,8 +5,8 @@ public class RunApp {
         SessionFactoryUtils sessionFactoryUtils = new SessionFactoryUtils();
         sessionFactoryUtils.init();
         try {
-            ProductDaoInterface userDao = new ProductDao(sessionFactoryUtils);
-            userDao.testCaching();
+            ProductDaoInterface productDao = new ProductDao(sessionFactoryUtils);
+            productDao.testCaching();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
