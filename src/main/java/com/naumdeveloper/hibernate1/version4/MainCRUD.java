@@ -1,34 +1,31 @@
 package com.naumdeveloper.hibernate1.version4;
 
+import com.naumdeveloper.hibernate1.version4.model.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import org.hibernate.cfg.Configuration;
 
 /* используется EntityManager , EntityManagerFactory; */
 
-public class Main {
+public class MainCRUD {
 
-    private EntityManager entityManager;
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         EntityManagerFactory entityManagerFactory = new Configuration()
                 // передача файла конфигурации Hibernate
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(User.class)
                 .buildSessionFactory();
 
+
          EntityManager entityManager = entityManagerFactory.createEntityManager();
 
-
-        DaoRepository daoRepository = new DaoRepository(entityManagerFactory);
-        daoRepository.findAll();
-
-
+/*
         // INSERT
-/*       entityManager.getTransaction().begin();
+       entityManager.getTransaction().begin();
 
        entityManager.persist(new User("User1", "1@a.com", "pass1"));
        entityManager.persist(new User("User2", "2@a.com", "pass2"));
-        entityManager.persist(new User("User3", "3@a.com", "pass3"));
+       entityManager.persist(new User("User3", "3@a.com", "pass3"));
 
        entityManager.getTransaction().commit();
 
