@@ -1,17 +1,14 @@
-package com.naumdeveloper.hibernate2;
+package com.naumdeveloper.hibernate2.model;
 
-public class Product {
-
+public class Customer {
     private Long id;
     private String name;
-    private String price;
 
-    public Product() {
+    public Customer() {
     }
 
-    public Product(String name, String price) {
+    public Customer(String name) {
         this.name = name;
-        this.price = price;
     }
 
     public Long getId() {
@@ -25,25 +22,15 @@ public class Product {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
     @Override
     public String toString() {
-        return "Product{" +
+        return "Customer{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", price='" + price + '\'' +
                 '}';
     }
 }

@@ -10,6 +10,7 @@ import org.hibernate.cfg.Configuration;
 public class MainDao {
 
     public static void main(String[] args) {
+
         EntityManagerFactory entityManagerFactory = new Configuration()
                 // передача файла конфигурации Hibernate
                 .configure("hibernate.cfg.xml")
@@ -17,14 +18,22 @@ public class MainDao {
                 .buildSessionFactory();
 
         EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
 
-        DaoRepository daoRepository = new DaoRepository(entityManagerFactory);
+            DaoCRUDRepository daoCRUDRepository = new DaoCRUDRepository(entityManagerFactory);
+            DaoCRUDRepository_ daoCRUDRepository_ = new DaoCRUDRepository_(entityManagerFactory);
 
+            /* */
+            daoCRUDRepository.findAll();
 
-        daoRepository.findAll();
+            /* */
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            entityManager.close();
+            entityManagerFactory.close();
+        }
 
-        entityManager.close();
-        entityManagerFactory.close();
     }
 }

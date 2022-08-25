@@ -9,10 +9,10 @@ import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-public class DaoRepository {
+public class DaoCRUDRepository {
     private final EntityManagerFactory emFactory;
 
-    public DaoRepository(EntityManagerFactory emFactory) {
+    public DaoCRUDRepository(EntityManagerFactory emFactory) {
         this.emFactory = emFactory;
     }
 
