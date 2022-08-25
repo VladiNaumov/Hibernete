@@ -1,6 +1,5 @@
-package com.naumdeveloper.hibernate1.version3.connect;
+package com.naumdeveloper.hibernate2;
 
-import com.naumdeveloper.hibernate1.version3.model.Product;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import org.hibernate.cfg.Configuration;
