@@ -8,7 +8,8 @@ public class AppRun {
         ManagerFactoryUtil managerFactory = new ManagerFactoryUtil();
          try {
 
-
+            Dao dao = new Dao(managerFactory);
+            dao.findAll();
 
         } catch (Exception e) {
             e.printStackTrace();

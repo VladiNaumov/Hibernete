@@ -16,6 +16,7 @@ public class ManagerFactoryUtil {
             this.entityManagerFactory = new Configuration()
                     .configure("hibernate.cfg.xml")
                     .addAnnotatedClass(Product.class)
+                    .addAnnotatedClass(Customer.class)
                     .buildSessionFactory();
         }
         if(entityManager == null) {
@@ -24,6 +25,7 @@ public class ManagerFactoryUtil {
         }
 
     }
+
 
     public EntityManager getEntityManager() {
         return entityManager;

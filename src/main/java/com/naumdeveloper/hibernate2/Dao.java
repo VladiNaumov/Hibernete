@@ -10,8 +10,8 @@ public class Dao {
     private Customer customer;
 
 
-    public Dao() {
-        this.entityManager = new ManagerFactoryUtil();
+    public Dao(ManagerFactoryUtil entityManager) {
+        this.entityManager = entityManager;
         entityManager.init();
         this.product = new Product();
         this.customer = new Customer();
