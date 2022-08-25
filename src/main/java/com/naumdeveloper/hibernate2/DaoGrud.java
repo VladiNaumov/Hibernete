@@ -19,12 +19,13 @@ public class DaoGrud {
 
     }
 
-    public List<Customer> findAll() {
+    public List<Customer> findCustomerAll() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         List<Customer> customers = entityManager.createQuery("select u from Customer u where ", Customer.class).getResultList();
         for (Customer x : customers) {
             System.out.println(x);
         }
+
         return customers;
 
     }
