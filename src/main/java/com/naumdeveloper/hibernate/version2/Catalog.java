@@ -1,6 +1,6 @@
 package com.naumdeveloper.hibernate.version2;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "catalogs")

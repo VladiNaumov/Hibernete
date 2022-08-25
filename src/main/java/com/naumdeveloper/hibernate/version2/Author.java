@@ -2,7 +2,7 @@ package com.naumdeveloper.hibernate.version2;
 
 import org.hibernate.annotations.Cascade;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.List;
 
 @Entity

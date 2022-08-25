@@ -1,6 +1,6 @@
 package com.naumdeveloper.hibernate.version2;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
 import java.security.SecureRandom;
 
