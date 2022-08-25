@@ -6,9 +6,7 @@ import java.util.List;
 public class Dao {
     private final ManagerFactoryUtil entityManager;
     private Product product;
-
     private Customer customer;
-
 
     public Dao(ManagerFactoryUtil entityManager) {
         this.entityManager = entityManager;
