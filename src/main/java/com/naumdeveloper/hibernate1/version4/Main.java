@@ -8,13 +8,20 @@ import org.hibernate.cfg.Configuration;
 
 public class Main {
 
+    private EntityManager entityManager;
     public static void main(String[] args) {
         EntityManagerFactory entityManagerFactory = new Configuration()
                 // передача файла конфигурации Hibernate
                 .configure("hibernate.cfg.xml")
+                .addAnnotatedClass(User.class)
                 .buildSessionFactory();
 
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
+         EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+
+        DaoRepository daoRepository = new DaoRepository(entityManagerFactory);
+        daoRepository.findAll();
+
 
         // INSERT
 /*       entityManager.getTransaction().begin();

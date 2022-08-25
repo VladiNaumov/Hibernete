@@ -12,6 +12,12 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Table(name = "users")
+
+@NamedQueries({
+        @NamedQuery(name = "findAllUsers", query = "Select u from User u"),
+        @NamedQuery(name = "countAllUsers", query = "Select count(u) from User u"),
+        @NamedQuery(name = "deleteUserById", query = "delete from User u where u.id = :id")
+})
 public class User {
 
     @Id
