@@ -1,8 +1,7 @@
-package com.naumdeveloper.hibernate.version2;
+package com.naumdeveloper.hibernate1.version2;
 
 import jakarta.persistence.*;
 import java.io.Serializable;
-import java.security.SecureRandom;
 
 @Entity
 @Table(name = "books_readers")

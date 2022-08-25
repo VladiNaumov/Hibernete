@@ -1,6 +1,4 @@
-package com.naumdeveloper.hibernate.version2;
-
-import org.hibernate.annotations.Cascade;
+package com.naumdeveloper.hibernate1.version2;
 
 import jakarta.persistence.*;
 import java.util.List;

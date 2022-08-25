@@ -1,7 +1,8 @@
-package com.naumdeveloper.hibernate.version3.repository;
+package com.naumdeveloper.hibernate1.version3.repository;
 
-import com.geekbraims.hibernate.hw.version2.connect.ManagerFactoryUtil;
-import com.geekbraims.hibernate.hw.version2.model.Product;
+
+import com.naumdeveloper.hibernate1.version3.connect.ManagerFactoryUtil;
+import com.naumdeveloper.hibernate1.version3.model.Product;
 
 import java.util.List;
 

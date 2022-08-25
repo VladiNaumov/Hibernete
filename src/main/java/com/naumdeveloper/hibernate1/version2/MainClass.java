@@ -1,10 +1,8 @@
-package com.naumdeveloper.hibernate.version2;
+package com.naumdeveloper.hibernate1.version2;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-import java.util.List;
 
 
 public class MainClass {

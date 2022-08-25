@@ -1,8 +1,8 @@
-package com.naumdeveloper.hibernate.version3;
+package com.naumdeveloper.hibernate1.version3;
 
 
-import com.geekbraims.hibernate.hw.version2.connect.ManagerFactoryUtil;
-import com.geekbraims.hibernate.hw.version2.repository.ProductDao;
+import com.naumdeveloper.hibernate1.version3.connect.ManagerFactoryUtil;
+import com.naumdeveloper.hibernate1.version3.repository.ProductDao;
 
 public class AppRun {
 

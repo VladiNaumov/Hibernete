@@ -1,4 +1,4 @@
-package com.naumdeveloper.hibernate.version1;
+package com.naumdeveloper.hibernate1.version1;
 import jakarta.persistence.*;
 
 @Entity

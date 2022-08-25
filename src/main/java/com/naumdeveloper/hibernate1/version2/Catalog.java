@@ -1,4 +1,4 @@
-package com.naumdeveloper.hibernate.version2;
+package com.naumdeveloper.hibernate1.version2;
 
 import jakarta.persistence.*;
 

@@ -1,4 +1,4 @@
-package com.naumdeveloper.hibernate.version4;
+package com.naumdeveloper.hibernate1.version4;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

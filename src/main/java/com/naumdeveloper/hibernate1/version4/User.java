@@ -1,4 +1,4 @@
-package com.naumdeveloper.hibernate.version4;
+package com.naumdeveloper.hibernate1.version4;
 
 import jakarta.persistence.*;
 import lombok.Getter;
