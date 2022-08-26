@@ -1,4 +1,4 @@
-package com.naumdeveloper.version2;
+package com.naumdeveloper.homework;
 
 import jakarta.persistence.*;
 import java.util.List;

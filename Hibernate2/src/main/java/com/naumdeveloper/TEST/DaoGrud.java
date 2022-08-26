@@ -1,7 +1,5 @@
-package com.naumdeveloper.version1;
+package com.naumdeveloper.TEST;
 
-import com.naumdeveloper.version1.model.Customer;
-import com.naumdeveloper.version1.model.Product;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 
