@@ -2,7 +2,7 @@ package com.naumdeveloper.homework.version1;
 
 
 import com.naumdeveloper.homework.version1.model.Product;
-import com.naumdeveloper.lesson.fisunov.Customer;
+import com.naumdeveloper.lesson.fisunov.version2.Customer;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import org.hibernate.cfg.Configuration;

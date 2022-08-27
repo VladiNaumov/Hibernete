@@ -1,4 +1,4 @@
-package com.naumdeveloper.lesson.fisunov;
+package com.naumdeveloper.lesson.fisunov.version2;
 
 import org.hibernate.annotations.Cascade;
 

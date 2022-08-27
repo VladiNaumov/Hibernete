@@ -1,4 +1,4 @@
-package com.naumdeveloper.lesson.fisunov;
+package com.naumdeveloper.lesson.fisunov.version2;
 
 import com.naumdeveloper.homework.version1.ProductDao;
 import com.naumdeveloper.homework.version1.ProductDaoInterface;

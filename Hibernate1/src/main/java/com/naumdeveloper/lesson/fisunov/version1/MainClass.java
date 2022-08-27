@@ -1,5 +1,9 @@
-package com.naumdeveloper.lesson.fisunov;
+package com.naumdeveloper.lesson.fisunov.version1;
 
+import com.naumdeveloper.lesson.fisunov.version2.Author;
+import com.naumdeveloper.lesson.fisunov.version2.Book;
+import com.naumdeveloper.lesson.fisunov.version2.Catalog;
+import com.naumdeveloper.lesson.fisunov.version2.Reader;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
