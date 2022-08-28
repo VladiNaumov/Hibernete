@@ -1,4 +1,4 @@
-package com.naumdeveloper.homework.version1.grud;
+package com.naumdeveloper.homework.grud;
 import com.naumdeveloper.lesson.titov.model.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

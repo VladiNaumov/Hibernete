@@ -1,8 +1,8 @@
-package com.naumdeveloper.homework.version1;
+package com.naumdeveloper.homework;
 
-import com.naumdeveloper.homework.version1.model.Contact;
-import com.naumdeveloper.homework.version1.model.ContactType;
-import com.naumdeveloper.homework.version1.model.User;
+import com.naumdeveloper.homework.model.Contact;
+import com.naumdeveloper.homework.model.ContactType;
+import com.naumdeveloper.homework.model.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import org.hibernate.cfg.Configuration;

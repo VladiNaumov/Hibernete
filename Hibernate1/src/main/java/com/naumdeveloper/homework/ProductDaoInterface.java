@@ -1,6 +1,6 @@
-package com.naumdeveloper.homework.version1;
+package com.naumdeveloper.homework;
 
-import com.naumdeveloper.homework.version1.model.Product;
+import com.naumdeveloper.homework.model.Product;
 
 import java.util.List;
 

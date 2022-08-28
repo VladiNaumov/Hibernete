@@ -1,4 +1,4 @@
-package com.naumdeveloper.homework.version1;
+package com.naumdeveloper.homework;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

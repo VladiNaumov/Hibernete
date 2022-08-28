@@ -10,7 +10,7 @@ import org.hibernate.cfg.Configuration;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainLesson6 {
+public class MainLesson {
 
     public static void main(String[] args) {
         EntityManagerFactory entityManagerFactory = new Configuration()

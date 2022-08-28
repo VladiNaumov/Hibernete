@@ -1,4 +1,4 @@
-package com.naumdeveloper.homework.version1.model;
+package com.naumdeveloper.homework.model;
 
 import jakarta.persistence.*;
 
