@@ -1,4 +1,4 @@
-package com.naumdeveloper.homework.grud;
+package com.naumdeveloper.homework.daoService;
 import com.naumdeveloper.lesson.titov.model.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -8,11 +8,11 @@ import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-public class UserGRUD {
+public class Dao {
 
     private final EntityManagerFactory emFactory;
 
-    public UserGRUD(EntityManagerFactory emFactory) {
+    public Dao(EntityManagerFactory emFactory) {
         this.emFactory = emFactory;
     }
 

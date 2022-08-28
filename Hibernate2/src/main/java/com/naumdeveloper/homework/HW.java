@@ -1,17 +1,46 @@
 package com.naumdeveloper.homework;
 
-
+import com.naumdeveloper.homework.daoService.Dao;
 import com.naumdeveloper.homework.model.Customer;
 import com.naumdeveloper.homework.model.Product;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
 import org.hibernate.cfg.Configuration;
 
-public class OneToManyAndBackApp {
+public class HW {
     public static void main(String[] args) {
 
+         // Получаем фабрику менеджеров сущностей
+        EntityManagerFactory entityManagerFactory = new Configuration()
+                .configure("hw_hibernate.cfg.xml")
+                .addAnnotatedClass(Customer.class)
+                 .addAnnotatedClass(Product.class)
+                .buildSessionFactory();
+        // Из фабрики создаем EntityManager
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+        Dao gr = new Dao(entityManagerFactory);
+
+        // Открываем транзакцию
+        entityManager.getTransaction().begin();
+
+
+
+        // Подтверждаем транзакцию
+        entityManager.getTransaction().commit();
+
+
+
+        entityManager.close();
+        entityManagerFactory.close();
+
+    }
+}
+
+
+/*
         SessionFactory factory = new Configuration()
-                .configure("hibernate.cfg.xml")
+                .configure("hw_hibernate.cfg.xml")
                 .addAnnotatedClass(Customer.class)
                 .addAnnotatedClass(Product.class)
                 .buildSessionFactory();
@@ -20,9 +49,9 @@ public class OneToManyAndBackApp {
         try {
             session = factory.getCurrentSession();
             session.beginTransaction();
-            Customer university = session.get(Customer.class, 1L);
+//            Customer university = session.get(Customer.class, 1L);
 //            System.out.println(university.getStudents().get(1).getName());
-             System.out.println(university);
+ //            System.out.println(university);
             session.getTransaction().commit();
 //            System.out.println(university);
 
@@ -47,3 +76,5 @@ public class OneToManyAndBackApp {
         }
     }
 }
+
+ */
