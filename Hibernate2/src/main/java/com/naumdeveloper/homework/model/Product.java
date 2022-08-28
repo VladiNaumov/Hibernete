@@ -8,13 +8,20 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false, unique = true)
+    @Column(name = "name", nullable = false, unique = true)
     private String name;
     @Column(nullable = false, unique = true)
+
     private String price;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
 
     public Product() {
     }
+
+
 
     public Product(String name, String price) {
         this.name = name;
@@ -43,6 +50,14 @@ public class Product {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     @Override

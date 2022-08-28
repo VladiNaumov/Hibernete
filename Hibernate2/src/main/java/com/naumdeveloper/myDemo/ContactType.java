@@ -1,4 +1,4 @@
-package com.naumdeveloper.homework.model;
+package com.naumdeveloper.myDemo;
 
 public enum ContactType {
     MOBILE_PHONE,

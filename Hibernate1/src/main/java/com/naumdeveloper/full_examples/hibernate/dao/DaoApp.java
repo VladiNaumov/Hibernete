@@ -1,11 +1,9 @@
 package com.naumdeveloper.full_examples.hibernate.dao;
 
 
-import com.naumdeveloper.full_examples.hibernate.PrepareDataApp;
+import com.naumdeveloper.full_examples.hibernate.validation.PrepareDataApp;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-import java.util.List;
 
 public class DaoApp {
     private static SessionFactory factory;

@@ -1,23 +1,26 @@
-package com.naumdeveloper.full_examples.hibernate.one_to_many_and_back;
+package com.naumdeveloper.homework;
 
-import com.naumdeveloper.full_examples.hibernate.validation.PrepareDataApp;
+
+import com.naumdeveloper.homework.model.Customer;
+import com.naumdeveloper.homework.model.Product;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 public class OneToManyAndBackApp {
     public static void main(String[] args) {
-        PrepareDataApp.forcePrepareData();
 
         SessionFactory factory = new Configuration()
-                .configure("configs/one_to_many_and_back/hibernate.cfg.xml")
+                .configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Customer.class)
+                .addAnnotatedClass(Product.class)
                 .buildSessionFactory();
 
         Session session = null;
         try {
             session = factory.getCurrentSession();
             session.beginTransaction();
-            University university = session.get(University.class, 1L);
+            Customer university = session.get(Customer.class, 1L);
 //            System.out.println(university.getStudents().get(1).getName());
              System.out.println(university);
             session.getTransaction().commit();

@@ -1,7 +1,7 @@
 package com.naumdeveloper.full_examples.hibernate.locking;
 
 
-import com.naumdeveloper.full_examples.hibernate.PrepareDataApp;
+import com.naumdeveloper.full_examples.hibernate.validation.PrepareDataApp;
 import jakarta.persistence.LockModeType;
 import jakarta.persistence.OptimisticLockException;
 import org.hibernate.Session;

@@ -1,6 +1,6 @@
 package com.naumdeveloper.full_examples.hibernate.criteria_api;
 
-import com.naumdeveloper.full_examples.hibernate.PrepareDataApp;
+import com.naumdeveloper.full_examples.hibernate.validation.PrepareDataApp;
 import jakarta.persistence.criteria.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

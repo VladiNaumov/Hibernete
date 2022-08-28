@@ -1,4 +1,4 @@
-package com.naumdeveloper.full_examples.hibernate;
+package com.naumdeveloper.full_examples.hibernate.validation;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -9,6 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.stream.Collectors;
 
+/* накатывает конфиг на бд */
 public class PrepareDataApp {
     // Вопросы: Разница между delete и remove
 

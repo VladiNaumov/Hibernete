@@ -1,4 +1,4 @@
-package com.naumdeveloper.homework.model;
+package com.naumdeveloper.myDemo;
 
 import jakarta.persistence.*;
 
@@ -8,9 +8,9 @@ import java.util.List;
 @Entity
 @Table(name = "users")
 @NamedQueries({
-        @NamedQuery(name = "findAllUsers", query = "Select u from User u"),
-        @NamedQuery(name = "countAllUsers", query = "Select count(u) from User u"),
-        @NamedQuery(name = "deleteUserById", query = "delete from User u where u.id = :id")
+        @NamedQuery(name = "findAllUsers", query = "SELECT u FROM User u"),
+        @NamedQuery(name = "countAllUsers", query = "SELECT count(u) FROM User u"),
+        @NamedQuery(name = "deleteUserById", query = "DELETE FROM User u WHERE u.id = :id")
 })
 public class User {
     @Id

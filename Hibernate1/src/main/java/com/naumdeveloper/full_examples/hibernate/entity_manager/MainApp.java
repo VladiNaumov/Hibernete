@@ -1,6 +1,6 @@
 package com.naumdeveloper.full_examples.hibernate.entity_manager;
 
-import com.naumdeveloper.full_examples.hibernate.PrepareDataApp;
+import com.naumdeveloper.full_examples.hibernate.validation.PrepareDataApp;
 import jakarta.persistence.EntityManager;
 
 

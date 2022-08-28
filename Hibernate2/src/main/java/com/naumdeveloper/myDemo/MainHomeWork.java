@@ -1,8 +1,5 @@
-package com.naumdeveloper.homework;
+package com.naumdeveloper.myDemo;
 
-import com.naumdeveloper.homework.model.Contact;
-import com.naumdeveloper.homework.model.ContactType;
-import com.naumdeveloper.homework.model.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import org.hibernate.cfg.Configuration;
@@ -60,7 +57,7 @@ public class MainHomeWork {
          entityManager.getTransaction().begin();
 
          contactList.forEach(contact -> contact.setUser(user));
-         entityManager.persist(user);
+         entityManager.merge(user);
 
          // Подтверждаем транзакцию
          entityManager.getTransaction().commit();

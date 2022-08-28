@@ -1,14 +1,12 @@
 package com.naumdeveloper.full_examples.hibernate.crud;
 
 
-import com.naumdeveloper.full_examples.hibernate.PrepareDataApp;
-import org.hibernate.LockMode;
+import com.naumdeveloper.full_examples.hibernate.validation.PrepareDataApp;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import jakarta.persistence.*;
 import java.util.List;
 
 public class CrudApp {

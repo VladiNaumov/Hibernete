@@ -1,7 +1,6 @@
 package com.naumdeveloper.full_examples.hibernate.lifecycle;
 
-import com.naumdeveloper.full_examples.hibernate.PrepareDataApp;
-import jakarta.persistence.*;
+import com.naumdeveloper.full_examples.hibernate.validation.PrepareDataApp;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

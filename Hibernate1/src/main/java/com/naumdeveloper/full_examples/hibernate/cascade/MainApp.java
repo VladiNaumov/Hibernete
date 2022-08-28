@@ -1,7 +1,6 @@
 package com.naumdeveloper.full_examples.hibernate.cascade;
 
-import com.naumdeveloper.full_examples.hibernate.PrepareDataApp;
-import com.naumdeveloper.full_examples.hibernate.crud.SimpleItem;
+import com.naumdeveloper.full_examples.hibernate.validation.PrepareDataApp;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
