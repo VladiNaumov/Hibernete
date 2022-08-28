@@ -1,8 +1,8 @@
-package com.naumdeveloper.lesson.fisunov.version2;
+package com.naumdeveloper.lesson.fisunov.homework;
 
 import org.hibernate.annotations.Cascade;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity

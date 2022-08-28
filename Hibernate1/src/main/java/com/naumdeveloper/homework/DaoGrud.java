@@ -1,7 +1,6 @@
 package com.naumdeveloper.homework;
 
 import com.naumdeveloper.homework.model.Product;
-import com.naumdeveloper.lesson.fisunov.version2.Customer;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 

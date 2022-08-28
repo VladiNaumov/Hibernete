@@ -1,6 +1,6 @@
-package com.naumdeveloper.lesson.fisunov.version2;
+package com.naumdeveloper.lesson.fisunov.homework;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "catalogs")
