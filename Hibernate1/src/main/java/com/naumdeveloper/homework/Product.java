@@ -1,24 +1,18 @@
-package com.naumdeveloper.homework.model;
-
+package com.naumdeveloper.homework;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Product")
+@Table(name ="Product")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(nullable = false, unique = true)
     private String name;
-    @Column(nullable = false, unique = true)
-    private String price;
+    private Double price;
 
     public Product() {
-    }
-
-    public Product(String name, String price) {
-        this.name = name;
-        this.price = price;
     }
 
     public Long getId() {
@@ -37,11 +31,11 @@ public class Product {
         this.name = name;
     }
 
-    public String getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
@@ -50,7 +44,7 @@ public class Product {
         return "Product{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", price='" + price + '\'' +
+                ", price=" + price +
                 '}';
     }
 }

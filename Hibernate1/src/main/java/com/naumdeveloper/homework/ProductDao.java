@@ -1,6 +1,5 @@
 package com.naumdeveloper.homework;
 
-import com.naumdeveloper.homework.model.Product;
 import org.hibernate.Session;
 
 import java.util.List;
@@ -45,17 +44,6 @@ public class ProductDao implements ProductDaoInterface {
                 session.getTransaction().commit();
                 return product;
             }
-
-        // SELECT
-//        User user = entityManager.find(User.class, 1L);
-
-        // JPQL, HQL
-//        List<User> users = entityManager.createQuery("select u from User u where u.id in (1, 2)", User.class)
-//                .getResultList();
-//
-//        for (User userFromDb : users) {
-//            System.out.println(userFromDb);
-//        }
     }
 
     @Override
@@ -76,7 +64,6 @@ public class ProductDao implements ProductDaoInterface {
             product.setName(newName);
             session.getTransaction().commit();
         }
-
     }
 
     @Override
@@ -97,22 +84,12 @@ public class ProductDao implements ProductDaoInterface {
         }
 
     }
-
-    // INSERT
-//        entityManager.getTransaction().begin();
-//
-//        entityManager.persist(new User("User1", "1@a.com", "pass1"));
-//        entityManager.persist(new User("User2", "2@a.com", "pass2"));
-//        entityManager.persist(new User("User3", "3@a.com", "pass3"));
-//
-//        entityManager.getTransaction().commit();
-
-
-
-    public void delete(){
-        // DELETE
-
-
+    public void dellId(int Id){
+        try (Session session = sessionFactoryUtils.getSession()) {
+             session.beginTransaction();
+             Product product = session.get(Product.class, Id);
+             session.delete(product);
+             session.getTransaction().commit();
+        }
     }
-
 }

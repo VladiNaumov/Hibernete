@@ -4,14 +4,15 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-/* используется Session , SessionFactory; */
 public class SessionFactoryUtils {
     private SessionFactory factory;
 
     public void init() {
         factory = new Configuration()
                 .configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Product.class)
                 .buildSessionFactory();
+
     }
 
     public Session getSession() {

@@ -1,6 +1,6 @@
 package com.naumdeveloper.lesson.fisunov.h2;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "users")

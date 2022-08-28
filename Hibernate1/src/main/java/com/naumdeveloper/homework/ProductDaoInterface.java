@@ -1,7 +1,5 @@
 package com.naumdeveloper.homework;
 
-import com.naumdeveloper.homework.model.Product;
-
 import java.util.List;
 
 public interface ProductDaoInterface {
