@@ -1,4 +1,4 @@
-package com.naumdeveloper.myDemo;
+package com.naumdeveloper.lesson.mytest;
 
 
 import jakarta.persistence.*;
