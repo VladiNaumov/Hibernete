@@ -1,4 +1,6 @@
 package com.naumdeveloper.homework.daoService;
+import com.naumdeveloper.homework.model.Customer;
+import com.naumdeveloper.homework.model.Product;
 import com.naumdeveloper.lesson.titov.model.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -16,33 +18,33 @@ public class Dao {
         this.emFactory = emFactory;
     }
 
-    public Optional<User> findById(long id) {
+    public Optional<Customer> findById(long id) {
         return executeForEntityManager(entityManager ->
-                Optional.ofNullable(entityManager.find(User.class, id)));
+                Optional.ofNullable(entityManager.find(Customer.class, id)));
     }
 
-    public List<User> findAll() {
+    public List<Customer> findAll() {
         return executeForEntityManager(entityManager ->
-                entityManager.createNamedQuery("findAllUsers", User.class).getResultList());
+                entityManager.createNamedQuery("findAll", Customer.class).getResultList());
     }
 
     public long count() {
         return executeForEntityManager(entityManager ->
-                entityManager.createNamedQuery("countAllUsers", Long.class).getSingleResult());
+                entityManager.createNamedQuery("countAll", Long.class).getSingleResult());
     }
 
-    public void save(User user) {
+    public void save(Customer customer) {
         executeInTransaction(entityManager -> {
-            if (user.getId() == null) {
-                entityManager.persist(user);
+            if (customer.getId()== null) {
+                entityManager.persist(customer);
             } else {
-                entityManager.merge(user);
+                entityManager.merge(customer);
             }
         });
     }
 
     public void delete(long id) {
-        executeInTransaction(entityManager -> entityManager.createNamedQuery("deleteUserById")
+        executeInTransaction(entityManager -> entityManager.createNamedQuery("deleteById")
                 .setParameter("id", id)
                 .executeUpdate());
     }

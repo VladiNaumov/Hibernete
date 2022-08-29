@@ -7,6 +7,13 @@ import java.util.List;
 
 @Entity
 @Table(name = "customer")
+
+@NamedQueries({
+        @NamedQuery(name = "findAll", query = "Select u from Customer u"),
+        @NamedQuery(name = "countAll", query = "Select count(u) from Customer u"),
+        @NamedQuery(name = "deleteById", query = "delete from Customer u where u.id = :id")
+})
+
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,6 +35,14 @@ public class Customer {
         this.product = product;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
@@ -46,10 +61,6 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", product=" + product +
-                '}';
+        return  String.format("Customer [id = %d, title = %s, customer_count = %d]", id, name, product.size());
     }
 }

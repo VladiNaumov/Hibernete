@@ -7,6 +7,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import org.hibernate.cfg.Configuration;
 
+
 public class HW {
     public static void main(String[] args) {
 
@@ -19,11 +20,18 @@ public class HW {
         // Из фабрики создаем EntityManager
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
-        Dao gr = new Dao(entityManagerFactory);
+        Dao dao = new Dao(entityManagerFactory);
+
+
 
         // Открываем транзакцию
         entityManager.getTransaction().begin();
+/*
+        Customer customer = entityManager.find(Customer.class, 0L);
+        System.out.println(customer.getProduct().get(0).getName());
+        System.out.println(customer);
 
+ */
 
 
         // Подтверждаем транзакцию
@@ -36,45 +44,3 @@ public class HW {
 
     }
 }
-
-
-/*
-        SessionFactory factory = new Configuration()
-                .configure("hw_hibernate.cfg.xml")
-                .addAnnotatedClass(Customer.class)
-                .addAnnotatedClass(Product.class)
-                .buildSessionFactory();
-
-        Session session = null;
-        try {
-            session = factory.getCurrentSession();
-            session.beginTransaction();
-//            Customer university = session.get(Customer.class, 1L);
-//            System.out.println(university.getStudents().get(1).getName());
- //            System.out.println(university);
-            session.getTransaction().commit();
-//            System.out.println(university);
-
-
-
-//            session.beginTransaction();
-//            University universityFromNamedQuery = session
-//                    .createNamedQuery("withStudents", University.class)
-//                    .setParameter("id", 1L)
-//                    .getSingleResult();
-//            Student s = session.get(Student.class, 1L);
-//            session.getTransaction().commit();
-//            System.out.println(s.getUniversity().getTitle());
-////            System.out.println(universityFromNamedQuery);
-////            System.out.println(universityFromNamedQuery.getStudents());
-
-        } finally {
-            factory.close();
-            if (session != null) {
-                session.close();
-            }
-        }
-    }
-}
-
- */
